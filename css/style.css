@@ -1,0 +1,538 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+.main .apple_section {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #e088cf;
+}
+
+.main .apple_text, .pear_text, .exotic_text {
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 230px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    z-index: 10;
+    animation-name: apple_text;
+    animation-fill-mode: both;
+    animation-duration: 2.3s;
+    animation-play-state: running;
+    animation-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: 0.2s;
+}
+@keyframes apple_text {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.main .pear_section{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation-name: pear_section;
+    animation-duration: 8s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+    animation-timing-function:cubic-bezier(0.915, 0.610, 0.0, 1);
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    transition: 0.6s;
+    transform: translatex(-2000px);
+    background-color: #c5e68a;
+    z-index: 9;
+}
+@keyframes pear_section {
+    0% {
+        transform: translatex(-2000px);
+    }
+    30% {
+        transform: translatex(0px);
+}
+    50% {
+        transform: translatex(0px);
+    }
+    100% {
+        display: none;
+        transform: translatex(0px);
+    }
+}
+
+.main .pear_text {
+    position: absolute;
+    animation-name: pear_text;
+    animation-fill-mode: both;
+    animation-duration: 1.3s;
+    animation-delay: 0.9s;
+    animation-play-state: running;
+    transition: 0.2s;
+    opacity: 0;
+    z-index: 20;
+}
+@keyframes pear_text {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.main .exotic_section {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+    animation-timing-function:cubic-bezier(0.915, 0.610, 0.0, 1);
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    transition: 0.6s;
+    transform: translatex(-2000px);
+    z-index: 9;
+    background-color: #8677fd;
+    animation-name: exotic_section;
+    animation-duration: 8s;
+    animation-delay: 6.2s;
+    z-index: 100;
+}
+@keyframes exotic_section {
+    0% {
+        transform: translatex(-2000px);
+        -webkit-transform: translatex(-2000px);
+        -moz-transform: translatex(-2000px);
+        -ms-transform: translatex(-2000px);
+        -o-transform: translatex(-2000px);
+}
+    30% {
+        transform: translatex(0);
+}
+    50% {
+        transform: translatex(0px);
+    }
+    100% {
+        display: none;
+        transform: translatex(0px);
+    }
+}
+
+
+.main .exotic_text {
+    position: absolute;
+    animation-name: exotic_text;
+    animation-fill-mode: both;
+    animation-duration: 2.3s;
+    animation-delay: 5.3s;
+    animation-play-state: running;
+    animation-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: 0.2s;
+    opacity: 0;
+    z-index: 120;
+}
+@keyframes exotic_text {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.main .menu {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: inherit;
+    padding: 0 30px;
+}
+.main .menu .logo h1 {
+    font-size: 42px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 800;
+}
+.main .menu ul {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+li, a {
+    text-decoration: none;
+    list-style: none;
+    color: rgba(0, 0, 0, 0.692);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+}
+.main .cans {
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    position: absolute;
+    overflow: hidden;
+    z-index: 999;
+}
+.main .cans .apple_fruit {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    animation-name: apple;
+    animation-duration: 1s;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+    animation-timing-function:cubic-bezier(0.915, 0.610, 0.0, 1);
+    animation-iteration-count: 1;
+    animation-play-state: running;
+}
+@keyframes apple {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(1000px);
+}
+}
+
+
+.main .cans .pear_fruit {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    animation-name: pear_fruit;
+    animation-duration: 6s;
+    animation-delay: 0.9s;
+    animation-fill-mode: forwards;
+    animation-timing-function:cubic-bezier(0.915, 0.610, 0.0, 1);
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    transition: 0.6s;
+    opacity: 1;
+    transform: translateY(-1000px);
+}
+@keyframes pear_fruit {
+    0% {
+        transform: translateY(-1000px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        display: none;
+        opacity: 0;
+        transform: translateY(0px);
+    }
+}
+
+.main .cans .pear_fruit2 {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    animation-name: pear_fruit2;
+    animation-duration: 5.7s;
+    animation-delay: 3.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function:cubic-bezier(0.315, 0, 0.0, 1);
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    opacity: 0;
+}
+@keyframes pear_fruit2 {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        display: none;
+        opacity: 1;
+        transform: translateY(1000px);
+
+}
+}
+
+
+.main .cans .exotic_fruit {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    animation-name: exotic_fruit;
+    animation-duration: 6s;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+    animation-timing-function:cubic-bezier(0.915, 0.610, 0.0, 1);
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    transition: 0.6s;
+    transform: translateY(-1000px);
+}
+@keyframes exotic_fruit {
+    0% {
+        transform: translateY(-1000px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        display: none;
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+
+
+
+.main .cans .all_cans{
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 90px;
+    position: relative;
+    z-index: 9999;
+}
+.main .cans .all_cans .apple img, .pear img, .pear2 img, .exotic img {
+    width: 100%;
+    z-index: 999;
+}
+.main .cans .all_cans .apple, .pear, .pear2, .exotic{
+    width: 260px;
+    position: absolute;
+    animation-name: apple_can;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-delay: 2s;
+    transition: 0.1s;
+    z-index: 99;
+}
+@keyframes apple_can {
+    0% {
+        transform: perspective(2400px) rotatey(0deg);
+}
+    50% {
+        transform: perspective(2400px) rotatey(160deg);
+        opacity: 0;
+    }
+    100% {
+        transform: perspective(2400px) rotatey(160deg);
+        opacity: 0;
+}
+}
+.main .cans .all_cans .shadow{
+    width: 230px;
+    height: 5px;
+    border-radius: 90%;
+    background-color: inherit;
+    box-shadow: -100px 30px 7px 3px rgba(0, 0, 0, 0.178);
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+}
+.shadow_front {
+    width: 50px;
+    height: 80%;
+    background-color: inherit;
+    border-radius: 10%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: -100px 30px 10px 20px rgba(0, 0, 0, 0.205);
+    position: absolute;
+    top: 15px;
+    right: 3px;
+}
+
+.pear {
+    animation-name: pear;
+    animation-delay: 2.1s;
+    animation-duration: 0.9s;
+    opacity: 0;
+    transition: 0.3s;
+}
+@keyframes pear {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        
+        opacity: 0;
+}
+}
+
+
+.pear2 {
+    animation-name: pear2;
+    animation-delay:2.2s;
+    animation-duration: 7.8s;
+    opacity: 0;
+    transition: 0.3s;
+}
+@keyframes pear2 {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.exotic {
+    animation-name: exotic;
+    animation-delay:7.3s;
+    animation-duration: 0s;
+    opacity: 0;
+    transition: 0.3s;
+}
+@keyframes exotic {
+    100% {
+        
+        opacity: 1;
+}
+}
+
+
+
+.main .cans .all_cans .top_leaf {
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    animation-name: top_leaf;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-play-state: running;
+}
+@keyframes top_leaf {
+    0% {
+        transform: perspective(1000px) rotateX(0deg);
+}
+    100% {
+        transform: translatex(264px) translatey(280px) rotate(140deg);
+        transform: rotate(20deg);
+        width: 90px;
+        perspective: 100px;
+        -webkit-transform: translatex(264px) translatey(280px) rotate(140deg);
+        -moz-transform: translatex(264px) translatey(280px) rotate(140deg);
+        -ms-transform: translatex(264px) translatey(280px) rotate(140deg);
+        -o-transform: translatex(264px) translatey(280px) rotate(140deg);
+}
+} 
+.main .cans .all_cans .bottom_leaf {
+    width: 75px;
+    position: absolute;
+    right: -40px;
+    top: 280px;
+    animation-name: bottom_leaf;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-iteration-count: 1;
+    animation-play-state: running;
+}
+@keyframes bottom_leaf {
+    0% {
+        transform: translatex(0px);
+        transform: perspective(1000px) rotateX(0deg);
+}
+    100% {
+        transform: translatex(-240px) translatey(-280px) rotate(-140deg);
+        transform: rotate(40deg);
+        width: 76px;
+        perspective: 100px;
+        -webkit-transform: translatex(-240px) translatey(-280px) rotate(-140deg);
+        -moz-transform: translatex(-240px) translatey(-280px) rotate(-140deg);
+        -ms-transform: translatex(-240px) translatey(-280px) rotate(-140deg);
+        -o-transform: translatex(-240px) translatey(-280px) rotate(-140deg);
+        display: none;
+}
+} 
+
+
+
+
+
+.main .right {
+    width: 140px;
+    color: rgba(0, 0, 0, 0.664);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+}  
